@@ -5,6 +5,7 @@ import { useScrollSpy } from '../hooks/useScrollSpy';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
+  { label: 'Start', target: 'hero' },
   { label: 'Über uns', target: 'about' },
   { label: 'Leistungen', target: 'leistungen' },
   { label: 'Portfolio', target: 'portfolio' },
@@ -30,6 +31,16 @@ export default function Navbar() {
   const scrollTo = (id: string) => {
     if (id === 'about') {
       navigate('/ueber-uns');
+      setMobileOpen(false);
+      return;
+    }
+    if (id === 'hero') {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
       setMobileOpen(false);
       return;
     }
