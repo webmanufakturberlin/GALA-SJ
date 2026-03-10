@@ -19,11 +19,11 @@ export default function PageLoader() {
           className="fixed inset-0 z-[100] bg-forest flex flex-col items-center justify-center gap-6"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -20 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <Leaf className="w-12 h-12 text-bronze" />
+            <img src="/logo.jpg" alt="Jute Gartenbau Logo" className="w-24 md:w-32 h-auto object-contain drop-shadow-lg rounded-xl" />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
