@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { useEffect } from 'react';
 import SectionHeading from './ui/SectionHeading';
 import SectionDivider from './ui/SectionDivider';
 import Navbar from './Navbar';
@@ -7,6 +8,10 @@ import Chatbot from './Chatbot';
 import { BackgroundEffects } from './BackgroundEffects';
 
 export default function AboutPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="relative min-h-screen bg-cream selection:bg-bronze/30 selection:text-forest">
             <BackgroundEffects />
@@ -51,8 +56,8 @@ export default function AboutPage() {
                             className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <img
-                                src="/Portfolio_1.webp"
-                                alt="Sascha Junker bei der Arbeit an einer Natursteinmauer"
+                                src="/sascha_junker.png"
+                                alt="Geschäftsführer Sascha Junker"
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-forest/60 via-transparent to-transparent"></div>
