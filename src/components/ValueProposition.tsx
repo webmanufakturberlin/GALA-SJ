@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'motion/react';
 import { CheckCircle, MapPin, Leaf, ShieldCheck, UserCheck, Star } from 'lucide-react';
-import { useState, useEffect, type Key, type ComponentType } from 'react';
+import { useState, useEffect, type Key } from 'react';
+import { Link } from 'react-router-dom';
 import SectionHeading from './ui/SectionHeading';
 import CountUp from './ui/CountUp';
 
@@ -226,6 +227,15 @@ export default function ValueProposition() {
           {boxes.map((box, i) => (
             <GlowCard key={i} box={box} index={i} isMobile={isMobile} />
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <Link
+            to="/ueber-uns"
+            className="btn-premium inline-flex items-center gap-2 px-8 py-4 bg-forest text-cream font-sans text-sm uppercase tracking-wider rounded-full border border-forest transition-shadow hover:shadow-xl"
+          >
+            Mehr über uns erfahren
+          </Link>
         </div>
       </div>
     </section>

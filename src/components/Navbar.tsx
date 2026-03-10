@@ -28,6 +28,11 @@ export default function Navbar() {
   }, []);
 
   const scrollTo = (id: string) => {
+    if (id === 'about') {
+      navigate('/ueber-uns');
+      setMobileOpen(false);
+      return;
+    }
     if (location.pathname !== '/') {
       navigate('/#' + id);
     } else {

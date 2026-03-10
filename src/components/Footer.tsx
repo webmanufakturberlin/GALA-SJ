@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const scrollTo = (id: string) => {
@@ -66,9 +67,9 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('about')} className="hover:text-bronze transition-colors cursor-pointer">
+                <Link to="/ueber-uns" className="hover:text-bronze transition-colors cursor-pointer">
                   Über uns
-                </button>
+                </Link>
               </li>
               <li>
                 <button onClick={() => scrollTo('process')} className="hover:text-bronze transition-colors cursor-pointer">

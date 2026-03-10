@@ -15,6 +15,7 @@ import PageLoader from './components/PageLoader';
 import SectionDivider from './components/ui/SectionDivider';
 import PortfolioPage from './components/PortfolioPage';
 import LeistungenPage from './components/LeistungenPage';
+import AboutPage from './components/AboutPage';
 
 function ScrollToHash() {
   const { hash } = useLocation();
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/leistungen/:slug" element={<LeistungenPage />} />
+        <Route path="/ueber-uns" element={<AboutPage />} />
       </Routes>
     </>
   );
